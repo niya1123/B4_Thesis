@@ -1,0 +1,31 @@
+%jbibtexを使う場合は，以下の「%ここから」「%ここまで」をコメントアウトし，
+
+%%ここから
+\begin{thebibliography}{1}
+\addcontentsline{toc}{section}{\refname}% 追加
+\bibitem{knuth}
+Donald E Knuth. The \TeX book. Addison--Wesley, 1986.
+
+\bibitem{kinosita}
+木下是雄. 理科系の作文技術. 中公新書 624, 1981.
+
+
+\bibitem{okumura}
+奥村晴彦. [改訂第４版] \LaTeXe 美文書作成入門. 技術評論社, 2007.
+
+\bibitem{labelName}
+第1著者, 第2著者.
+\newblock 論文名(論文の場合のかき方).
+\newblock 論文誌名, 巻番号, 号番号, pp. 31--38, 2018.
+
+
+\end{thebibliography}
+%%ここまで
+
+%そして以下の2行: \bibliography{reference} と
+%\addcontentsline{toc}{section}{\bibname}のコメントアウトを解除する．
+
+%\addcontentsline{toc}{section}{\bibname}
+%\bibliography{reference}
+
+\bibliographystyle{jplain}
