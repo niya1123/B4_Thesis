@@ -59,7 +59,7 @@ jsonファイルに変換するには，以下のような手順を経てコマ�
 これにより，教材提供者はコンテンツを互いにjsonファイルを介して共有することが可能となる．
 
 \begin{enumerate}
-    \item dockerコマンドを用いて本プラットフォームを動作させているコンテナにログインする．ex)docker exec -it コンテナ名 /bin/ash
+    \item 「docker exec -it コンテナ名 /bin/ash」などとして，本プラットフォームを動作させているコンテナにログインする．
     \item cdコマンドを用いてDjangoによって自動的に生成されたmanage.pyファイルと同階層に移動する．
     \item 「python manage.py dumpdata jsonファイルに変換したいデータのDBのテーブル名 > 保存するjsonファイル名.json」を実行後，jsonファイルが生成．
 \end{enumerate}
