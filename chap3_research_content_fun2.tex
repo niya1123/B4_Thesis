@@ -3,6 +3,16 @@
 提示する統計情報の内容としては，問題の各選択肢における割合や回答者の年齢層，性別である．
 統計情報提供機能のGUIは図\ref{toukei}の通りである．
 
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[width=15cm,height=14cm,keepaspectratio]{toukei_ex-crop.pdf}\\
+        %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
+    \end{center}
+    \caption{統計情報提供機能のGUI}
+    \label{toukei}
+\end{figure}
+
+\newpage
 本機能はChart.jsというjavascriptで作成されたグラフ描画ライブラリを作成している．
 Chart.jsでは線グラフ，棒グラフ，レーダーチャート，鶏頭図，ドーナツチャート，円グラフ，バブルチャートを作成できる．
 本機能では，棒グラフと円グラフを使用している．
