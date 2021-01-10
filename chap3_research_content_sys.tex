@@ -69,8 +69,18 @@ Webブラウザで本プラットフォームに接続しログインした後�
     \label{client_naibu}
 \end{figure}
 
+\newpage
 続いて，サーバーの内部構成を図\ref{server_naibu}に示す．サーバーはDjangoを用いて作成されたDjango処理部とgolangを用いて作成されたgolang処理部，データを保存するためのデータベース処理部がある．
 サーバはクライアントからの通信が行われた場合に動作する．それぞれの処理部の内容について以下に示す．
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[width=13cm,height=12cm,keepaspectratio]{server_arch-crop.pdf}\\
+        %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
+    \end{center}
+    \caption{サーバの内部構成}
+    \label{server_naibu}
+\end{figure}
 
 \begin{description}
     \item[・Django処理部]\mbox{}\\
@@ -82,15 +92,6 @@ Webブラウザで本プラットフォームに接続しログインした後�
         データベース処理部では，Django処理部においてデータベースのやり取りが必要な場合に動作する．Django処理部からsqlコマンドが発行され，それを実行処理している．
 \end{description}
 
-\begin{figure}[htbp]
-    \begin{center}
-        \includegraphics[width=13cm,height=12cm,keepaspectratio]{server_arch-crop.pdf}\\
-        %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
-    \end{center}
-    \caption{サーバの内部構成}
-    \label{server_naibu}
-\end{figure}
-
 \subsubsection{システムのフローチャート}
 教材提供者のフローチャートを図\ref{provider_flow}に，学習者のフローチャートを図\ref{learn_flow}に示す.本システムはまず，教材提供者はログインが必須，学習者は任意となっている．そのため今回は簡単のため教材提供者と学習者がともにログインした場合のフローチャートとする．
 
@@ -98,12 +99,6 @@ Webブラウザで本プラットフォームに接続しログインした後�
 教材提供者アカウントに設定した後，ログイン処理を行う．ログインが完了したら教材提供者はコンテンツ提供機能を用いてコンテンツの必要情報を入力し，サーバに対して登録を行う．
 統計情報提供機能を用いる場合は，コンテンツに対する統計情報をサーバに対しリクエストすると，その結果が画面上に表示される．
 コンテナ管理機能を用いる場合は，動作させたいアプリケーションの情報をクライアント上で入力することにより，サーバに対しその情報がリクエストされ，実行される．実行が正常に完了した場合，接続するためのURLが画面上に表示される．
-
-続いて学習者について説明を行う．学習者はWebブラウザで本プラットフォームに接続した後，本プラットフォームでアカウント作成を行うことができる．アカウント作成には，本プラットフォーム上で表示される
-ユーザ名，性別，年齢，パスワードと確認用パスワードが必要である．アカウント作成後，トップページにて教材提供者が作成したコンテンツを選択，閲覧できる．
-
-
-コンテンツ提供機能，統計情報提供機能，コンテナ管理機能についての詳細は\ref{sec:fun1}節，\ref{sec:fun2}節，\ref{sec:fun3}節にて述べる．
 
 \newpage
 \begin{figure}[htbp]
@@ -114,6 +109,13 @@ Webブラウザで本プラットフォームに接続しログインした後�
     \caption{教材提供者のフローチャート}
     \label{provider_flow}
 \end{figure}
+
+\newpage
+続いて学習者について説明を行う．学習者はWebブラウザで本プラットフォームに接続した後，本プラットフォームでアカウント作成を行うことができる．アカウント作成には，本プラットフォーム上で表示される
+ユーザ名，性別，年齢，パスワードと確認用パスワードが必要である．アカウント作成後，トップページにて教材提供者が作成したコンテンツを選択，閲覧できる．
+
+コンテンツ提供機能，統計情報提供機能，コンテナ管理機能についての詳細は\ref{sec:fun1}節，\ref{sec:fun2}節，\ref{sec:fun3}節にて述べる．
+
 \begin{figure}[htbp]
     \begin{center}
         \includegraphics[width=10cm,height=9cm,keepaspectratio]{learn_flow-crop.pdf}\\
