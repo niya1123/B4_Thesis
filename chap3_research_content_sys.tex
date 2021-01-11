@@ -1,10 +1,6 @@
 \subsubsection{システム構成}
 本システムの構成を図\ref{system}に示す．本システムはDjangoで構成されるアプリケーション部(以下，クライアント)，およびgolangとdjangorestframeworkで構成されるサーバ部(以下，サーバ)から構築される．
-サーバはAPIを用いて統計情報提供機能とコンテナ管理機能を動作させる．コンテンツ提供機能のGUIを図\ref{teikyou}に，統計情報提供機能のGUIを図\ref{toukei}に，コンテナ管理機能のGUIを図\ref{kanri}にそれぞれ示す．
-
-教材提供者は図\ref{teikyou}のコンテンツ提供機能を用いて情報倫理に関するコンテンツを提供する．図\ref{toukei}の統計情報提供機能では，教材提供者が学習者の回答情報等をグラフとして確認できる．図\ref{kanri}のコンテナ管理機能では教材提供者がDockerを用いて作成した他の教育アプリケーションを本プラットフォームでも利用することが可能となる．
-
-学習者は図\ref{teikyou}のコンテンツ提供機能を用いて作成されたコンテンツを図\ref{naiyou}のようにして閲覧，学習することが可能である．
+サーバはAPIを用いて統計情報提供機能とコンテナ管理機能を動作させる．
 
 \begin{figure}[htbp]
     \begin{center}
@@ -15,15 +11,22 @@
     \label{system}
 \end{figure}
 
+
+コンテンツ提供機能のGUIを図\ref{teikyou}に，統計情報提供機能のGUIを図\ref{toukei}に，コンテナ管理機能のGUIを図\ref{kanri}にそれぞれ示す．
+
+教材提供者は図\ref{teikyou}のコンテンツ提供機能を用いて情報倫理に関するコンテンツを提供する．
+
 \begin{figure}[htbp]
     \begin{center}
-        \includegraphics[width=13cm,height=12cm,keepaspectratio]{create_content-crop.pdf}\\
+        \includegraphics[width=8cm,height=7cm,keepaspectratio]{create_content-crop.pdf}\\
         %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
     \end{center}
     \caption{コンテンツ提供機能のGUI}
     \label{teikyou}
 \end{figure}
 
+\newpage
+図\ref{toukei}の統計情報提供機能では，教材提供者が学習者の回答情報等をグラフとして確認できる．
 \begin{figure}[htbp]
     \begin{center}
         \includegraphics[width=13cm,height=12cm,keepaspectratio]{toukei-crop.pdf}\\
@@ -33,15 +36,19 @@
     \label{toukei}
 \end{figure}
 
+
+図\ref{kanri}のコンテナ管理機能では教材提供者がDockerを用いて作成した他の教育アプリケーションを本プラットフォームでも利用することが可能となる．
 \begin{figure}[htbp]
     \begin{center}
-        \includegraphics[width=13cm,height=12cm,keepaspectratio]{container_management-crop.pdf}\\
+        \includegraphics[width=10.25cm,height=9.25cm,keepaspectratio]{container_management-crop.pdf}\\
         %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
     \end{center}
     \caption{コンテナ管理機能のGUI}
     \label{kanri}
 \end{figure}
 
+\newpage
+学習者は図\ref{teikyou}のコンテンツ提供機能を用いて作成されたコンテンツを図\ref{naiyou}のようにして閲覧，学習することが可能である．
 \begin{figure}[htbp]
     \begin{center}
         \includegraphics[width=13cm,height=12cm,keepaspectratio]{naiyou-crop.pdf}\\
@@ -51,6 +58,7 @@
     \label{naiyou}
 \end{figure}
 
+\newpage
 \subsubsection{システムの内部構成}
 クライアントの内部構成を図\ref{client_naibu}に示す．はじめに，教材提供者および学習者が各々ネットワークに接続できる環境を用意し，Webブラウザを立ち上げ，特定のIPアドレスを入力しログインする．
 ただし，教材提供者が本プラットフォームの機能を利用するにはログインは必須であるが，学習者は必須ではない．
@@ -92,6 +100,7 @@ Webブラウザで本プラットフォームに接続しログインした後�
         データベース処理部では，Django処理部においてデータベースのやり取りが必要な場合に動作する．Django処理部からsqlコマンドが発行され，それを実行処理している．
 \end{description}
 
+\newpage
 \subsubsection{システムのフローチャート}
 教材提供者のフローチャートを図\ref{provider_flow}に，学習者のフローチャートを図\ref{learn_flow}に示す.本システムはまず，教材提供者はログインが必須，学習者は任意となっている．そのため今回は簡単のため教材提供者と学習者がともにログインした場合のフローチャートとする．
 
@@ -100,10 +109,9 @@ Webブラウザで本プラットフォームに接続しログインした後�
 統計情報提供機能を用いる場合は，コンテンツに対する統計情報をサーバに対しリクエストすると，その結果が画面上に表示される．
 コンテナ管理機能を用いる場合は，動作させたいアプリケーションの情報をクライアント上で入力することにより，サーバに対しその情報がリクエストされ，実行される．実行が正常に完了した場合，接続するためのURLが画面上に表示される．
 
-\newpage
 \begin{figure}[htbp]
     \begin{center}
-        \includegraphics[width=16cm,height=15cm,keepaspectratio]{provider_flow-crop.pdf}\\
+        \includegraphics[width=14cm,height=13cm,keepaspectratio]{provider_flow-crop.pdf}\\
         %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
     \end{center}
     \caption{教材提供者のフローチャート}
