@@ -14,11 +14,12 @@
 
 コンテンツ提供機能のGUIを図\ref{teikyou}に，統計情報提供機能のGUIを図\ref{toukei}に，コンテナ管理機能のGUIを図\ref{kanri}にそれぞれ示す．
 
+\newpage
 教材提供者は図\ref{teikyou}のコンテンツ提供機能を用いて情報倫理に関するコンテンツを提供する．
 
 \begin{figure}[htbp]
     \begin{center}
-        \includegraphics[width=8cm,height=7cm,keepaspectratio]{create_content-crop.pdf}\\
+        \includegraphics[width=13cm,height=12cm,keepaspectratio]{create_content-crop.pdf}\\
         %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
     \end{center}
     \caption{コンテンツ提供機能のGUI}
@@ -36,11 +37,11 @@
     \label{toukei}
 \end{figure}
 
-
+\newpage
 図\ref{kanri}のコンテナ管理機能では教材提供者がDockerを用いて作成した他の教育アプリケーションを本プラットフォームでも利用することが可能となる．
 \begin{figure}[htbp]
     \begin{center}
-        \includegraphics[width=10.25cm,height=9.25cm,keepaspectratio]{container_management-crop.pdf}\\
+        \includegraphics[width=13cm,height=12cm,keepaspectratio]{container_management-crop.pdf}\\
         %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
     \end{center}
     \caption{コンテナ管理機能のGUI}
@@ -64,13 +65,13 @@
 ただし，教材提供者が本プラットフォームの機能を利用するにはログインは必須であるが，学習者は必須ではない．
 
 Webブラウザで本プラットフォームに接続しログインした後，教材提供者はGUIのコンテンツ提供機能，統計情報提供機能，コンテナ管理機能を使用できる．
-コンテンツ提供機能は教材提供者が入力した内容をサーバーを介しデータベースに保存する．
+コンテンツ提供機能は教材提供者が入力した内容をサーバを介しデータベースに保存する．
 統計情報提供機能はデータベースからサーバを介しデータを取得しWebブラウザ上に情報を表示する．
 コンテナ管理機能は教材提供者が入力した内容をgolangで作成したAPIで実行し，Dockerのコマンドを用いてコンテナが建ち上がっていることを確認し，建ち上がっていた場合それにアクセスするURLを画面上に発行する．
 
 \begin{figure}[htbp]
     \begin{center}
-        \includegraphics[width=10cm,height=9cm,keepaspectratio]{client_arch-crop.pdf}\\
+        \includegraphics[width=13cm,height=12cm,keepaspectratio]{client_arch-crop.pdf}\\
         %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
     \end{center}
     \caption{クライアントの内部構成}
@@ -78,7 +79,7 @@ Webブラウザで本プラットフォームに接続しログインした後�
 \end{figure}
 
 \newpage
-続いて，サーバーの内部構成を図\ref{server_naibu}に示す．サーバーはDjangoを用いて作成されたDjango処理部とgolangを用いて作成されたgolang処理部，データを保存するためのデータベース処理部がある．
+続いて，サーバの内部構成を図\ref{server_naibu}に示す．サーバはDjangoを用いて作成されたDjango処理部とgolangを用いて作成されたgolang処理部，データを保存するためのデータベース処理部がある．
 サーバはクライアントからの通信が行われた場合に動作する．それぞれの処理部の内容について以下に示す．
 
 \begin{figure}[htbp]
@@ -126,7 +127,7 @@ Webブラウザで本プラットフォームに接続しログインした後�
 
 \begin{figure}[htbp]
     \begin{center}
-        \includegraphics[width=10cm,height=9cm,keepaspectratio]{learn_flow-crop.pdf}\\
+        \includegraphics[width=13cm,height=12cm,keepaspectratio]{learn_flow-crop.pdf}\\
         %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
     \end{center}
     \caption{学習者のフローチャート}
