@@ -5,10 +5,10 @@ Pythonはオブジェクト指向プログラミングを超えて，手続き�
 また，多くのシステムコールやライブラリだけでなく，様々なウィンドウシステムへのインターフェースがあり，C\cite{Clang}やC++\cite{cplusplus}で拡張することもできる．
 
 \subsubsection{Django}
-Django\cite{Django}は，Pythonで実装された無料オープンソースのWebアプリケーションフレームワークの一つである．
+Django\cite{Django}は，Pythonで実装されたオープンソースのWebアプリケーションフレームワークの一つである．
 Djangoが作られた時の目的として，複雑なデータベース主体のウェブサイトを簡単に構築するというものがある．
 これを実現するため，Djangoではコンポーネントの再利用性，素早い開発の原則に力を入れている．
-このような流れから，Djangoには以下のような特徴がある．
+Djangoには以下のような特徴がある．
 
 \begin{description}
     \item[・高速な動作]\mbox{}\\
@@ -54,7 +54,7 @@ Viewは，モデルから取得したデータとHTMLテンプレートを使用
     \item[・Djangoシェル]\mbox{}\\
         Djangoアプリケーションの環境を有効にしたままコマンドで操作が可能．
     \item[・マイグレーション]\mbox{}\\
-        データベースの操作を一括に実行・取り消しを行うことが可能．
+        データベースの操作を一括に実行・取り消すことが可能．
     \item[・管理サイト]\mbox{}\\
         Webブラウザで，データベースを操作することが可能． 
 \end{description}
@@ -66,21 +66,21 @@ Viewは，モデルから取得したデータとHTMLテンプレートを使用
     \begin{center}
         \caption{Dockerコマンド一覧}
         \begin{tabularx}{\textwidth}{|l|X|}\hline
-            manage.py createsuperuser & 管理者ユーザを作成する． \\ \hline
-            manage.py changepassword & ユーザのパスワードを変更する． \\ \hline
+            manage.py createsuperuser & 管理者ユーザを作成． \\ \hline
+            manage.py changepassword & ユーザのパスワードを変更． \\ \hline
             manage.py check & プロジェクトの構成チェック． \\ \hline
-            manage.py dbshell & データベース管理用のシェルを起動する． \\ \hline
-            manage.py dumpdata & データベースの内容をJson等の形式でエクスポートする． \\ \hline
-            manage.py loaddata & データベースにdumpファイルをインポートする． \\ \hline
+            manage.py dbshell & データベース管理用のシェルを起動． \\ \hline
+            manage.py dumpdata & データベースの内容をJson等の形式でエクスポート． \\ \hline
+            manage.py loaddata & データベースにdumpファイルをインポート． \\ \hline
             manage.py makemigrations & マイグレーションファイルの作成． \\ \hline
-            manage.py migrate & データベースにマイグレーションを摘葉する． \\ \hline
-            manage.py shell & 管理者用のコマンドシェルを起動したいわモードに入る． \\ \hline
+            manage.py migrate & データベースにマイグレーションを適用． \\ \hline
+            manage.py shell & 管理者用のコマンドシェルを起動し対話モードに入る． \\ \hline
             manage.py startapp & 新規アプリケーションの作成． \\ \hline
             manage.py startproject & プロジェクトディレクトリの作成． \\ \hline
             manage.py test & テストフレームワークの実行． \\ \hline
-            manage.py testserver & 検証用サーバを起動する． \\ \hline
-            manage.py collectstatic & staticファイルの収集を行う． \\ \hline
-            manage.py runserver & アプリケーションの起動を行う． \\ \hline
+            manage.py testserver & 検証用サーバを起動． \\ \hline
+            manage.py collectstatic & staticファイルの収集． \\ \hline
+            manage.py runserver & アプリケーションの起動． \\ \hline
         \end{tabularx}
         \label{django_command}
     \end{center}
