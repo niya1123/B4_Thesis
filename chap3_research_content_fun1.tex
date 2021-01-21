@@ -55,12 +55,12 @@
     \label{create_question}
 \end{figure}
 
-最後に，Djangoの機能を用いることにより本機能で投稿したコンテンツをjsonファイルに変換することができる．
-jsonファイルに変換するには，以下のような手順を経てコマンドを発行すればよい．
-これにより，教材提供者はコンテンツを互いにjsonファイルを介して共有することが可能となる．
+最後に，Djangoの機能を用いることにより本機能で投稿したコンテンツをJsonファイルに変換することができる．
+Jsonファイルに変換するには，以下のような手順を経てコマンドを発行すればよい．
+これにより，教材提供者はコンテンツを互いにJsonファイルを介して共有することが可能となる．
 
 \begin{enumerate}
     \item 「docker exec -it コンテナ名 /bin/ash」などとして，本プラットフォームを動作させているコンテナにログインする．
     \item cdコマンドを用いてDjangoによって自動的に生成されたmanage.pyファイルと同階層に移動する．
-    \item 「python manage.py dumpdata jsonファイルに変換したいデータのDBのテーブル名 \textgreater 保存するjsonファイル名.json」を実行後，jsonファイルが生成．
+    \item 「python manage.py dumpdata Jsonファイルに変換したいデータのDBのテーブル名 \textgreater 保存するJsonファイル名.json」を実行後，Jsonファイルが生成される．
 \end{enumerate}
