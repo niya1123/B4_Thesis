@@ -1,5 +1,5 @@
 \subsubsection{要件定義}
-本システムはサーバ，クライアントで以下の要件を持たす必要がある．
+本システムはサーバ，クライアントで以下の要件を満たす必要がある．
 
 まずサーバの要件を示す．
 
@@ -26,9 +26,17 @@ PostgreSQLは，Djangoを通してクライアントから入力されたデー�
 クライアントは教材提供者と学習者に対してGUIを提供する．
 詳細は，\ref{sec:fun1}節，\ref{sec:fun2}節，\ref{sec:fun3}節で述べる．
 
-また，コンテンツ提供機能は日々変化する情報倫理に対応するため，コンテンツを素早く投稿，編集する必要があるため作成した．
-統計情報提供機能は，年代，性別の違いから情報倫理に関する意識に違いが生まれていることから作成した．
-コンテナ管理機能は，教材提供者が過去に作成したアプリケーションを用いたい場合があるため作成した．
+また，作成する機能は以下の要件を満たすように作成した．
+
+\begin{itemize}
+    \item 日々変化する情報倫理に対応する為の機能を作成する
+    \item 年代，性別の違いによる情報倫理に関する意識の違いを確認する為の機能を作成する
+    \item 本アプリケーション以外のアプリケーションを本アプリケーションでも利用可能にする機能を作成する
+\end{itemize}
+
+日々変化する情報倫理に対応する為の機能は，コンテンツ提供機能として作成し，これを用いてコンテンツを素早く投稿，編集する．
+年代，性別の違いによる情報倫理に関する意識の違いを確認する為の機能は，統計情報提供機能として作成し，年代や性別をグラフとして提示する．
+本アプリケーション以外のアプリケーションを本アプリケーションでも利用可能にする機能は，コンテナ管理機能として作成し，Dockerを用いたアプリケーションを本プラットフォーム上でも利用可能にする．
 
 \newpage
 \subsubsection{システム構成}
@@ -37,7 +45,7 @@ PostgreSQLは，Djangoを通してクライアントから入力されたデー�
 
 \begin{figure}[htbp]
     \begin{center}
-        \includegraphics[width=18cm,height=17cm,keepaspectratio]{system-crop.pdf}\\
+        \includegraphics[width=16cm,height=15cm,keepaspectratio]{system-crop.pdf}\\
         %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
     \end{center}
     \caption{システム構成}
@@ -63,7 +71,7 @@ PostgreSQLは，Djangoを通してクライアントから入力されたデー�
 図\ref{toukei}の統計情報提供機能では，教材提供者が学習者の回答情報等をグラフとして確認できる．
 \begin{figure}[htbp]
     \begin{center}
-        \includegraphics[width=18cm,height=17cm,keepaspectratio]{toukei-crop.pdf}\\
+        \includegraphics[width=16cm,height=15cm,keepaspectratio]{toukei-crop.pdf}\\
         %includegraphicsの詳しい使い方ははLaTeXの参考書を参照．
     \end{center}
     \caption{統計情報提供機能のGUI}
